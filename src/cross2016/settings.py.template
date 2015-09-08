@@ -1,0 +1,6 @@
+# eocnding=utf-8
+
+from cross2016.base_settings import *
+
+SOCIAL_AUTH_TWITTER_KEY = 'ChangeMe'
+SOCIAL_AUTH_TWITTER_SECRET = 'ChangeMe'

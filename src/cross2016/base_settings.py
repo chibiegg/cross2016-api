@@ -34,6 +34,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = (
     'cross2016',
     'rest_framework',
+    'social.apps.django_app.default',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -66,6 +67,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'social.apps.django_app.context_processors.backends',
+                'social.apps.django_app.context_processors.login_redirect',
             ],
         },
     },
@@ -73,6 +76,17 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'cross2016.wsgi.application'
 
+AUTHENTICATION_BACKENDS = (
+    'social.backends.twitter.TwitterOAuth',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+SOCIAL_AUTH_TWITTER_KEY = 'ChengeMe'
+SOCIAL_AUTH_TWITTER_SECRET = 'ChengeMe'
+
+LOGIN_REDIRECT_URL = "/auth/"
 
 # Database
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases

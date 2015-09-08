@@ -3,3 +3,4 @@ djangorestframework
 markdown
 django-filter
 django-debug-toolbar
+python-social-auth
