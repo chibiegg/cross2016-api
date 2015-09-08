@@ -1,5 +1,7 @@
 # cross2016-api
 
+[![Build Status](https://travis-ci.org/chibiegg/cross2016-api.svg)](https://travis-ci.org/chibiegg/cross2016-api)
+
 ## Requiements
 
 * Python3.4
